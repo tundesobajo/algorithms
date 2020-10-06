@@ -6,6 +6,12 @@
   "repository": "https://github.com/github:tundesobajo/algorithms.git",
   "author": "6509610+tundesobajo@users.noreply.github.com",
   "license": "MIT",
+  "scripts": {
+    "test": "mocha ./src/**/*.spec.js"
+  },
+  "dependencies": {
+    "mocha": "^8.1.3"
+  },
   "devDependencies": {
     "eslint": "^7.10.0",
     "eslint-config-airbnb-base": "^14.2.0",

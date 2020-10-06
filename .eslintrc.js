@@ -12,4 +12,13 @@ module.exports = {
   rules: {
     'no-console': 'off',
   },
+  "overrides": [
+    {
+      "files": ["*-test.js","*.spec.js"],
+      "rules": {
+        "no-unused-expressions": "off",
+        "func-names": "off",
+      }
+    }
+  ],
 };

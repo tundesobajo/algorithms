@@ -237,4 +237,23 @@ module.exports = class SinglyLinkedList {
 
     return node.value;
   }
+
+  /**
+   * Function to reverse the order of nodes in list
+   * 
+   * @returns {this} The SinglyLinkedList
+   */
+  reverse() {
+    let node = this.head;
+    let { next } = node;
+    while (next) {
+      const prev = node;
+      node = next;
+      next = next.next;
+      node.next = prev;
+    }
+    [this.head, this.tail] = [this.tail, this.head];
+
+    return this;
+  }
 }

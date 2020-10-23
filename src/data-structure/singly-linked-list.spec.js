@@ -230,4 +230,37 @@ describe('Singly Linked List', function () {
       assert.strictEqual(list.length, 3);
     });
   });
+
+  describe('#reverse', function () {
+    it('can reverse a list of 1 value', function () {
+      list.push('One');
+
+      assert.strictEqual(list.reverse(), list);
+      assert.strictEqual(list.length, 1);
+      assert.strictEqual(list.head.value, 'One');
+    });
+
+    it('can reverse a list of 2 values', function () {
+      list.push('One');
+      list.push('Two');
+
+      assert.strictEqual(list.reverse(), list);
+      assert.strictEqual(list.length, 2);
+      assert.strictEqual(list.head.value, 'Two');
+      assert.strictEqual(list.tail.value, 'One');
+    });
+
+    it('can reverse a list of 3 values', function () {
+      list.push('One');
+      list.push('Two');
+      list.push('Three');
+
+      assert.strictEqual(list.reverse(), list);
+      assert.strictEqual(list.length, 3);
+      assert.strictEqual(list.head.value, 'Three');
+      assert.strictEqual(list.get(1), 'Two');
+      assert.strictEqual(list.tail.value, 'One');
+    });
+
+  });
 });

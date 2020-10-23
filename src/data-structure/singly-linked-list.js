@@ -210,24 +210,22 @@ module.exports = class SinglyLinkedList {
    * @returns {any} Value of removed node
    */
   remove(index) {
-    if (this.length === 0 || index < 0 || index >= this.length) {
+    if (index < 0 || index >= this.length) {
       return undefined;
     }
 
-    let prev;
-    let node = this.head;
+    if (index === this.length - 1) {
+      return this.pop();
+    }
 
     if (index === 0) {
-      this.head = node.next;
-    } else {
-      prev = this.getNode(index - 1);
-      node = prev.next;
-      prev.next = node.next;
+      return this.shift();
     }
 
-    if (index === this.length) {
-      this.tail = prev;
-    }
+    const prev = this.getNode(index - 1);
+    const node = prev.next;
+
+    prev.next = node.next;
 
     this.length -= 1;
 

@@ -127,7 +127,7 @@ module.exports = class SinglyLinkedList {
    * @returns {Node} Node in index
    */
   getNode(index) {
-    if (this.length === 0 || index < 0 || index >= this.length) {
+    if (index < 0 || index >= this.length) {
       return undefined;
     }
 

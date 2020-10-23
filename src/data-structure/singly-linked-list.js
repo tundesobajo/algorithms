@@ -183,23 +183,19 @@ module.exports = class SinglyLinkedList {
       return false;
     }
 
-    let node = this.head;
-    const newNode = new Node(value);
+    if (index === this.length) {
+      return !!this.push(value);
+    }
 
     if (index === 0) {
-      newNode.next = node;
-      this.head = newNode;
-    } else {
-      for (let i = 1; i < index; i++) {
-        node = node.next;
-      }
-      newNode.next = node.next;
-      node.next = newNode;
+      return !!this.unshift(value);
     }
 
-    if (index === this.length) {
-      this.tail = newNode;
-    }
+    const node = new Node(value);
+    const prev = this.getNode(index - 1);
+
+    node.next = prev.next;
+    prev.next = node;
 
     this.length += 1;
 

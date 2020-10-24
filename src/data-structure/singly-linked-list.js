@@ -1,4 +1,4 @@
-const Node = require('./node');
+const Node = require('./singly-linked-node');
 /**
  * Singly linked list
  */

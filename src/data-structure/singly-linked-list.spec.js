@@ -232,6 +232,10 @@ describe('Singly Linked List', function () {
   });
 
   describe('#reverse', function () {
+    it('can reverse a list of 0 values', function () {
+      assert.strictEqual(list.reverse(), list);
+    });
+
     it('can reverse a list of 1 value', function () {
       list.push('One');
 

@@ -239,7 +239,7 @@ module.exports = class SinglyLinkedList {
    */
   reverse() {
     let node = this.head;
-    let { next } = node;
+    let next = node && node.next;
     while (next) {
       const prev = node;
       node = next;

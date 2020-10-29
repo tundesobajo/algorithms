@@ -1,4 +1,4 @@
-const assert = require('assert');
+const { expect } = require('chai');
 const Stack = require('./stack');
 
 describe('Stack', function () {
@@ -10,9 +10,9 @@ describe('Stack', function () {
 
   describe('#push', function () {
     it('can push 3 values into stack', function () {
-      assert.strictEqual(stack.push('One'), 1);
-      assert.strictEqual(stack.push('Two'), 2);
-      assert.strictEqual(stack.push('Three'), 3);
+      expect(stack.push('One')).to.equal(1);
+      expect(stack.push('Two')).to.equal(2);
+      expect(stack.push('Three')).to.equal(3);
     });
   });
 
@@ -22,10 +22,10 @@ describe('Stack', function () {
       stack.push('Two');
       stack.push('Three');
 
-      assert.strictEqual(stack.pop(), 'Three');
-      assert.strictEqual(stack.pop(), 'Two');
-      assert.strictEqual(stack.pop(), 'One');
-      assert.strictEqual(stack.size, 0);
+      expect(stack.pop()).to.equal('Three');
+      expect(stack.pop()).to.equal('Two');
+      expect(stack.pop()).to.equal('One');
+      expect(stack.size).to.equal(0);
     });
   });
 });

@@ -1,21 +1,20 @@
-const assert = require('assert');
+require('chai').should();
 const matchBrackets = require('./match-brackets');
 
-
 describe('Match brackets', function () {
-  it('should return true', function () {
-    assert.ok(matchBrackets('| | { [ ] } ( )'));
+  it('should be true for "| | { [ ] } ( )"', function () {
+    matchBrackets('| | { [ ] } ( )').should.be.true;
   });
 
-  it('should return true', function () {
-    assert.ok(matchBrackets('{ | [ ] ( ) | }'));
+  it('should be true for "{ | [ ] ( ) | }"', function () {
+    matchBrackets('{ | [ ] ( ) | }').should.be.true;
   });
 
-  it('should return false', function () {
-    assert.strictEqual(matchBrackets('{ [ ( ] ) }'), false);
+  it('should be false for "{ [ ( ] ) }"', function () {
+    matchBrackets('{ [ ( ] ) }').should.be.false;
   });
 
-  it('should return false', function () {
-    assert.strictEqual(matchBrackets('{ [ }'), false);
+  it('should be false for "{ [ }"', function () {
+    matchBrackets('{ [ }').should.be.false;
   });
 });

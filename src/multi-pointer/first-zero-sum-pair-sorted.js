@@ -15,9 +15,9 @@ module.exports = function firstZeroSumPairSorted(arr) {
     if (sum < 0) {
       x++;
     } else if (sum > 0) {
-      y++;
+      y--;
     } else {
-      return [arr[x], [arr[y]]];
+      return [arr[x], arr[y]];
     }
   }
   return undefined;

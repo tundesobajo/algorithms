@@ -1,12 +1,12 @@
-const assert = require('assert');
+const { expect } = require('chai');
 const anagrams = require('./anagrams');
 
 describe('Anagrams', function () {
   it('passes as anagram pair', function () {
-    assert.ok(anagrams('anagram', 'nagaram'));
+    expect(anagrams('anagram', 'nagaram')).to.be.true;
   });
-  
+
   it('fails as anagram pair', function () {
-    assert.ok(!anagrams('aaz', 'zza'));
+    expect(anagrams('aaz', 'zza')).to.be.false;
   });
 });

@@ -1,7 +1,7 @@
-const assert = require('assert');
+const { expect } = require('chai');
 const fibonacci = require('./fibonacci');
 
 describe('fibonacci', function () {
-  it('returns 5', function () { assert.strictEqual(fibonacci(5), 5)});
-  it('returns 13', function () { assert.strictEqual(fibonacci(7), 13)});
+  it('returns 5', function () { expect(fibonacci(5)).to.equal(5) });
+  it('returns 13', function () { expect(fibonacci(7)).to.equal(13) });
 });

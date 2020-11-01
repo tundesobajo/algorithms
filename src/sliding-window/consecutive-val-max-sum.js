@@ -8,7 +8,7 @@
  * @returns {number} Max consecutive sum
  */
 module.exports = function consecutiveValMaxSum(arr, num) {
-  if (num === 0 || arr.length < num) return null;
+  if (num === 0 || arr.length < num) return undefined;
 
   let max = 0;
   let tmp = 0;

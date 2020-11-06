@@ -22,5 +22,8 @@
   },
   "mocha": {
     "spec": "src/**/*.spec.js"
+  },
+  "dependencies": {
+    "sinon": "^9.2.1"
   }
 }

@@ -1,18 +1,18 @@
 const { expect } = require('chai');
-const Tree = require('../data-structure/tree');
+const BinaryTree = require('../data-structure/binary-tree');
 const arrayToTree = require('./array-to-tree');
 
 describe('Array to Tree', function () {
   it('creates tree with 1', function () {
     const tree = arrayToTree(1);
 
-    expect(tree).to.an.be.instanceof(Tree);
+    expect(tree).to.an.be.instanceof(BinaryTree);
   });
 
   it('creates tree with [1]', function () {
     const tree = arrayToTree([1, undefined]);
 
-    expect(tree).to.an.be.instanceof(Tree);
+    expect(tree).to.an.be.instanceof(BinaryTree);
   });
 
   it('creates tree with [1, [2, 3]]', function () {

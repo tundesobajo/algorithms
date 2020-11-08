@@ -1,4 +1,4 @@
-const Node = require('./tree-node');
+const Node = require('./binary-tree-node');
 /**
  * Binary searct tree (BST) data structure.
  * 

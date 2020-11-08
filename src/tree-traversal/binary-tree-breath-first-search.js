@@ -1,4 +1,4 @@
-const Tree = require('../data-structure/tree');
+const Tree = require('../data-structure/binary-tree');
 const Queue = require('../data-structure/queue');
 
 /**

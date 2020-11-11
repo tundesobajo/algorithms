@@ -1,7 +1,7 @@
 const { expect } = require('chai');
 const BinaryTree = require('../data-structure/binary-tree');
 const arrayToTree = require('../utils/array-to-tree');
-const binaryTreeDepthFirstPreOrderSearch = require('./binary-tree-depth-first-pre-order-search');
+const { binaryTreeDepthFirstPreOrderSearch } = require('./binary-tree-search');
 
 describe('Breath First Tree Search', function () {
   it('returns []', function () {

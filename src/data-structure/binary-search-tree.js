@@ -7,11 +7,23 @@ const Node = require('./binary-tree-node');
  * have a lower-valued left child and a higher valued right child.
  */
 module.exports = class BinarySearchTree {
-  constructor() {
+  /**
+   * Constructor.
+   * May receive an array to populate tree with.
+   * 
+   * @param {Array} arr Construct a BST
+   */
+  constructor(arr = []) {
     /**
      * @type {Node|undefined} Root node
      */
     this.root = undefined;
+
+    if (Array.isArray(arr) && arr.length) {
+      const tree = new BinarySearchTree();
+      arr.forEach(n => tree.insert(n));
+      return tree;
+    }
   }
 
   /**

@@ -1,8 +1,8 @@
-const Node = require('./list/singly-linked-node');
+const Node = require('../list/singly-linked-node');
 /**
- * Stack (LIFO) data structure
+ * Queue (FIFO) data structure
  */
-module.exports = class Stack {
+module.exports = class Queue {
   constructor() {
     /**
      * @type {Node} First node
@@ -19,25 +19,21 @@ module.exports = class Stack {
   }
 
   /**
-   * Push a value onto the stack.
-   * 
-   * Although push is supposed to add to the end of a list,
-   * We push onto the beginning of the stack to get (0n) time
-   * with push and pop.
+   * Enqueue a value onto the end of the queue.
    * 
    * @param {any} value Value to add
    * 
-   * @returns {number} Size of stack
+   * @returns {number} Size of queue
    */
-  push(value) {
+  enqueue(value) {
     const node = new Node(value);
 
     if (this.size === 0) {
       this.first = node;
       this.last = node;
     } else {
-      node.next = this.first;
-      this.first = node;
+      this.last.next = node;
+      this.last = node;
     }
 
     this.size += 1;
@@ -46,11 +42,11 @@ module.exports = class Stack {
   }
 
   /**
-   * Pop a value from the top of the stack.
+   * Dequeue a value from the top of the queue.
    * 
    * @returns {any} Value popped
    */
-  pop() {
+  dequeue() {
     if (this.size === 0) {
       return undefined;
     }

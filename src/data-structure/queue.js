@@ -1,4 +1,4 @@
-const Node = require('./singly-linked-node');
+const Node = require('./list/singly-linked-node');
 /**
  * Queue (FIFO) data structure
  */

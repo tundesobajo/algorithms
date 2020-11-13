@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const BinarySearchTree = require('../data-structure/binary-search-tree');
+const BinarySearchTree = require('../../data-structure/tree/binary-search-tree');
 const binarySearchTreeSecondLargestValue = require('./bst-second-largest-value');
 
 describe('Binary Search Tree Second Largest Value', function () {

@@ -1,5 +1,5 @@
-const Node = require('../data-structure/binary-tree-node');
-const BinaryTree = require('../data-structure/binary-tree');
+const Node = require('../data-structure/tree/binary-tree-node');
+const BinaryTree = require('../data-structure/tree/binary-tree');
 
 /**
  * Convert a nested array to a tree.

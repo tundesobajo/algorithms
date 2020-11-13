@@ -1,5 +1,5 @@
-const Tree = require('../data-structure/binary-tree');
-const Queue = require('../data-structure/queue');
+const Tree = require('../../data-structure/tree/binary-tree');
+const Queue = require('../../data-structure/queue');
 
 /**
  * Traverse the tree in breath first search order.

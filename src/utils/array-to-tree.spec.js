@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const BinaryTree = require('../data-structure/binary-tree');
+const BinaryTree = require('../data-structure/tree/binary-tree');
 const arrayToTree = require('./array-to-tree');
 
 describe('Array to Tree', function () {

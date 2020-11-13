@@ -1,5 +1,5 @@
-const BinarySearchTree = require('../data-structure/binary-search-tree');
-const BinaryTreeNode = require('../data-structure/binary-tree-node');
+const BinarySearchTree = require('../../data-structure/tree/binary-search-tree');
+const BinaryTreeNode = require('../../data-structure/tree/binary-tree-node');
 
 /**
  * Find node with the largest value.
